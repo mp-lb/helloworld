@@ -1,0 +1,13 @@
+node_modules
+dist
+coverage
+/tmp/
+.DS_Store
+.env
+.zap
+*.tsbuildinfo
+AGENTS.local.md
+AGENTS_WORKTREE.md
+AGENTS.md
+CLAUDE.md
+.fssstack-release-result.json

@@ -1,0 +1,14 @@
+type: fssstack
+name: HelloWorld
+emoji: 🦄
+description: "An app all about unicorns"
+projectSlug: helloworld
+packagePrefix: "@mp-lb"
+shadcnPreset: b1a1M7Tvs
+frontends:
+  - name: frontend
+    type: react-vite
+backends:
+  - backend
+libs: []
+extensions: []
