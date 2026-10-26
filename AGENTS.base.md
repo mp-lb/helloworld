@@ -7,6 +7,12 @@ HelloWorld is an app all about unicorns.
 - Keep the project local-only; do not configure cloud resources, deployments, or external provider accounts.
 - Follow the audit process in `audit.md` when an audit is requested.
 
+## Documentation
+
+Keep HelloWorld-specific documents under `docs/`. This project has no dedicated Forum store or sync configuration. The historical `forum.yaml` shared-doc mappings have been removed.
+
+Read shared standards with `fm read <file>.md --store mp-lb/dev` (list them with `fm ls --store mp-lb/dev`). Read shared extensions with `fm read extensions/<file>.md --store mp-lb/fssstack` (list them with `fm ls extensions --store mp-lb/fssstack`).
+
 # Audit this FSS Stack project
 
 Use this process when asked to audit how this repository aligns with the
