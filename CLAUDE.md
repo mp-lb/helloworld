@@ -7,6 +7,10 @@ HelloWorld is an app all about unicorns.
 - Keep the project local-only; do not configure cloud resources, deployments, or external provider accounts.
 - Follow the audit process in `audit.md` when an audit is requested.
 
+## Delivery
+
+This reference project is local-only and has no application deployment or package publication workflow. Internal workspace packages should remain `private: true`.
+
 ## Documentation
 
 Keep HelloWorld-specific documents under `docs/`. This project has no dedicated Forum store or sync configuration. The historical `forum.yaml` shared-doc mappings have been removed.
