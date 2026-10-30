@@ -136,6 +136,12 @@ importers:
         specifier: 4.4.3
         version: 4.4.3
 
+  packages/scripts:
+    devDependencies:
+      tsx:
+        specifier: 4.20.6
+        version: 4.20.6
+
   packages/server:
     dependencies:
       '@mp-lb/fssstack-platform':

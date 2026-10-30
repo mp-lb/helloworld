@@ -1,0 +1,12 @@
+{
+  "name": "@mp-lb/helloworld-scripts",
+  "private": true,
+  "type": "module",
+  "scripts": {
+    "typecheck": "tsc --noEmit -p tsconfig.json",
+    "test": "tsx --test *.test.ts publishing/*.test.ts"
+  },
+  "devDependencies": {
+    "tsx": "4.20.6"
+  }
+}
