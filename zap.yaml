@@ -14,12 +14,27 @@ native:
     cmd: pnpm --filter @mp-lb/helloworld-frontend dev --host 0.0.0.0 --port ${FRONTEND_PORT}
     env: "*"
 tasks:
+  scripts:
+    cmds:
+      - pnpm exec tsx packages/scripts/index.ts
+  scripts-test:
+    cmds:
+      - pnpm --filter @mp-lb/helloworld-scripts test
+  augment-docs-site:
+    cmds:
+      - pnpm exec tsx packages/scripts/augmentDocsSite.ts {{REST}}
+  publish-packages:
+    cmds:
+      - pnpm exec tsx packages/scripts/autoPublish.ts {{REST}}
+  verify-publication:
+    cmds:
+      - pnpm exec tsx packages/scripts/verifyPublication.ts {{REST}}
   context-build:
     cmds:
-      - node scripts/context-files.mjs build {{REST}}
+      - pnpm exec tsx packages/scripts/contextFiles.ts build {{REST}}
   context-copy:
     cmds:
-      - node scripts/context-files.mjs copy {{REST}}
+      - pnpm exec tsx packages/scripts/contextFiles.ts copy {{REST}}
   compile-agents:
     cmds:
       - zap task context-build -- {{REST}}
