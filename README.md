@@ -4,7 +4,7 @@ This repository is an FSS Stack project. It is a pnpm workspace with application
 
 ## Prerequisites
 
-- Node.js 20 or newer
+- Node.js 22.13 or newer
 - pnpm 11
 - Zapper (`zap`) for local service orchestration
 
@@ -77,3 +77,15 @@ its findings to `docs/audits/YYYY-MM-DD-fssstack.md` in an isolated worktree for
 - Use workspace package names with `pnpm --filter` for focused commands.
 - Check service logs and port assignments through Zapper while debugging local runs.
 - Update the docs in `docs/` when changing project conventions or release behavior.
+
+## Tool versions
+
+Use the exact Node version in `.node-version` and the pnpm version in
+`package.json#packageManager`. `engines.node` declares the minimum supported
+Node version; it is not a development pin. CI reads `.node-version`.
+
+With mise installed, run `mise trust`, then `mise install`. Use an activated
+mise shell or `mise exec -- <command>` so Zapper inherits these tools.
+For nvm, run `nvm install "$(cat .node-version)"` and
+`nvm use "$(cat .node-version)"`. Dependency policy lives in
+`pnpm-workspace.yaml`; use `workspace:*` for internal dependencies.
